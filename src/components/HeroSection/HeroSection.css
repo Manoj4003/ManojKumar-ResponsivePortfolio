@@ -1,0 +1,118 @@
+.portfolio_hero_wrapper {
+  background-image: url('../../assets/hero_bg.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: calc(100vh - 70px);
+  display: flex;
+  align-items: center;
+  padding: 120px 1rem 2rem 1rem;
+  z-index: 1;
+}
+
+/* Hero Text */
+.hero-text h1 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.hero-text h3 {
+  font-size: 1.5rem;
+  font-weight: 500;
+  margin-bottom: 1rem;
+}
+
+.hero-text p {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 1.5rem;
+}
+
+.hero-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: start;
+}
+
+.hero-buttons .btn {
+  padding: 12px 30px;
+  font-size: 1rem;
+  border-radius: 50px;
+  color: #fff;
+  border: none;
+  background-color: #42999e;
+  transition: all 0.5s ease;
+}
+
+.hero-buttons .btn:hover {
+  background-color: #150507;
+  color: #fff;
+}
+
+/* "Hi!" in red */
+.hi-text {
+  color: #ff4c60;
+  display: inline-block;
+  white-space: nowrap;
+}
+
+/* Gradient color for name */
+.name-text {
+  background: linear-gradient(90deg, #42999e, #ffb347);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Hero Image */
+.hero-image-wrapper {
+  max-width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 1.5rem;
+}
+
+.hero-image-wrapper img {
+  width: 100%;
+  max-width: 450px;
+  border-radius: 10px;
+  transition: transform 1.5s ease;
+}
+
+.hero-image-wrapper img:hover {
+  transform: scale(1.08);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .hero-text {
+    text-align: center;
+  }
+
+  .hero-buttons {
+    justify-content: center;
+  }
+
+  .hero-text h1 {
+    font-size: 2rem;
+  }
+
+  .hero-text h3 {
+    font-size: 1.2rem;
+  }
+
+  .hero-text p {
+    font-size: 0.95rem;
+  }
+
+  .hero-image-wrapper img {
+    max-width: 300px;
+    margin: 0 auto;
+  }
+}
+
+/* Smooth scroll offset for navbar links */
+html {
+  scroll-padding-top: 70px;
+}

@@ -1,0 +1,85 @@
+/* Navbar Background */
+.custom-navbar {
+  background-color: #1b949b;
+  padding: 0.8rem 0;
+  min-height: 80px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  font-family: 'Poppins', sans-serif;
+  z-index: 1030;
+}
+
+/* Brand styling */
+.brand-wrapper {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #fff !important;
+  letter-spacing: 1px;
+  transition: 0.3s;
+}
+
+.brand-wrapper:hover {
+  color: #ff4c60 !important;
+}
+
+/* Nav links styling */
+.nav-links .nav-link {
+  color: #fff !important;
+  margin-right: 1.5rem;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.nav-links .nav-link:hover {
+  color: #ffb347 !important;
+}
+
+/* "Let's Talk" button styling */
+.lets-talk-btn {
+  background-color: #ff4c60;
+  border: none;
+  color: #fff;
+  font-weight: 600;
+  padding: 0.45rem 1.2rem;
+  border-radius: 25px;
+  transition: 0.3s;
+}
+
+.lets-talk-btn:hover {
+  background-color: #e03b4b;
+  color: #fff;
+}
+
+/* Mobile responsive styles */
+@media (max-width: 767px) {
+  .navbar-collapse {
+    background-color: #1b949b;
+    padding: 1rem 0;
+    width: 100%;
+  }
+
+  .navbar-collapse .nav-link {
+    display: block;
+    width: 100%;
+    margin: 0.25rem 0;
+    text-align: center;
+  }
+
+  .lets-talk-btn {
+    width: 90%;
+    margin: 0.5rem auto 0 auto;
+    display: block;
+  }
+
+  .navbar-toggler {
+    border-color: #fff;
+  }
+
+  .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba%28255,255,255,1%29' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+  }
+}
+
+/* Smooth scroll */
+html {
+  scroll-behavior: smooth;
+}
