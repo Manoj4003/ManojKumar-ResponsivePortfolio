@@ -1,5 +1,5 @@
 import React from "react";
-import { Navbar, Nav, Container, Row, Col, Button } from "react-bootstrap";
+import { Navbar, Nav, Container, Row, Col } from "react-bootstrap";
 import "./Navbar.css";
 
 function AppNavbar() {
@@ -25,7 +25,7 @@ function AppNavbar() {
                 <Nav.Link href="#skills">Skills</Nav.Link>
                 <Nav.Link href="#projects">Projects</Nav.Link>
                 <Nav.Link href="#contact">Contact</Nav.Link>
-                <Button className="lets-talk-btn ms-md-3 mt-2 mt-md-0">Let's Talk</Button>
+               
               </Nav>
             </Navbar.Collapse>
           </Col>

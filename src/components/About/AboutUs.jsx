@@ -2,6 +2,7 @@ import React from "react";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
 import Col from "react-bootstrap/Col";
+import { FaEnvelope, FaMapMarkerAlt, FaCalendarAlt, FaGithub, FaLinkedin, FaUser } from "react-icons/fa";
 import about from '../../assets/about-us.webp';
 import resume from '../../assets/MANOJKUMAR A -RESUME.pdf';
 import "./AboutUs.css";
@@ -12,7 +13,7 @@ function AboutUs() {
       <Container>
         <Row className="align-items-center">
           <Col md={5} className="about-image">
-           <img src={about} alt="Aboutus" />
+            <img src={about} alt="About Me" />
           </Col>
           <Col md={7} className="about-text">
             <h2>About Me</h2>
@@ -33,15 +34,17 @@ function AboutUs() {
             </p>
 
             <div className="contact-details">
-              <p><strong>Name:</strong> Manoj Kumar A</p>
-              <p><strong>Age:</strong> 24</p>
-              <p><strong>Email:</strong> manojknr16@gmail.com</p>
-              <p><strong>Address:</strong> 2/90 Avinashi, Trippur</p>
+              <p><FaUser /> <strong>Name:</strong> Manoj Kumar A</p>
+              <p><FaCalendarAlt /> <strong>Age:</strong> 24</p>
+              <p><FaEnvelope /> <strong>Email:</strong> <a href="mailto:manojknr16@gmail.com">manojknr16@gmail.com</a></p>
+              <p><FaMapMarkerAlt /> <strong>Address:</strong> 2/90 Avinashi, Trippur</p>
+              <p><FaGithub /> <strong>GitHub:</strong> <a href="https://github.com/Manoj4003" target="_blank" rel="noopener noreferrer">https://github.com/Manoj4003</a></p>
+              <p><FaLinkedin /> <strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/manojkumar1608/" target="_blank" rel="noopener noreferrer">https://www.linkedin.com/in/manojkumar1608/</a></p>
             </div>
 
             <div className="hero-buttons">
-              <a href="/resume.pdf" target="_blank" rel="noopener noreferrer">
-              <a href={resume}><button >Download Resume</button></a>  
+              <a href={resume} target="_blank" rel="noopener noreferrer">
+                <button>Download Resume</button>
               </a>
             </div>
           </Col>

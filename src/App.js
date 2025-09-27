@@ -1,6 +1,8 @@
 
 import './App.css';
 import AboutUs from './components/About/AboutUs';
+import ContactPage from './components/ContactUs/ContactUs';
+
 import Education from './components/Education/Education';
 import HeroSection from './components/HeroSection/HeroSection';
 import AppNavbar from './components/Navbar/Navbar';
@@ -17,6 +19,7 @@ function App() {
       <Education/>
       <Skills/>
       <Projects/>
+      <ContactPage/>
     </div>
   );
 }

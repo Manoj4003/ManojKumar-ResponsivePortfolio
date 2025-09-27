@@ -1,5 +1,5 @@
 .about-section {
-  min-height: 100vh; /* full screen height */
+  min-height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -8,7 +8,7 @@
 }
 
 .about-section .row {
-  align-items: center; /* vertically align image & text */
+  align-items: center;
 }
 
 .about-section img {
@@ -19,13 +19,34 @@
   margin: 0 auto;
   display: block;
   box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 1s forwards;
+  animation-delay: 0.3s;
 }
 
-.about-section h1 {
+.about-text {
+  opacity: 0;
+  animation: fadeIn 1s forwards;
+  animation-delay: 0.5s;
+
+}
+.about-text h2{
+  color: #1b949b !important;
+}
+
+.about-section h2 {
   font-size: 2.4rem;
   font-weight: 700;
   margin-bottom: 15px;
   color: #222;
+}
+
+.about-section h3 {
+  font-size: 1.8rem;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  color: #1b949b;
 }
 
 .about-section p {
@@ -37,9 +58,12 @@
 
 .about-section hr {
   border: none;
-  border-top: 2px solid #007bff;
+  border-top: 2px solid #1b949b;
   width: 60px;
   margin: 25px 0;
+}
+.contact-details a{
+  text-decoration: none;
 }
 
 .contact-details {
@@ -49,15 +73,22 @@
 .contact-details p {
   font-size: 1rem;
   color: #333;
-  margin: 6px 0;
+  margin: 8px 0;
+  display: flex;
+  align-items: center;
+}
+
+.contact-details p svg {
+  margin-right: 8px;
+  color: #1b949b;
 }
 
 .hero-buttons {
-  margin-top: 20px;
+  margin-top: 25px;
 }
 
 .hero-buttons button {
-  background: #007bff;
+  background: #1b949b;
   color: #fff;
   padding: 12px 30px;
   border: none;
@@ -65,15 +96,32 @@
   font-size: 1rem;
   font-weight: 600;
   cursor: pointer;
-  transition: 0.3s ease;
+  transition: all 0.3s ease;
 }
 
 .hero-buttons button:hover {
-  background: #0056b3;
+  background: #138080;
   transform: translateY(-2px);
 }
+a{
+  list-style-type: none;
+}
 
-/* 📱 Responsive Design */
+/* Animations */
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+/* Responsive Design */
 @media (max-width: 768px) {
   .about-section {
     padding: 40px 20px;
@@ -84,8 +132,12 @@
     margin-bottom: 30px;
   }
 
-  .about-section h1 {
+  .about-section h2 {
     font-size: 2rem;
+  }
+
+  .about-section h3 {
+    font-size: 1.5rem;
   }
 
   .about-section p {

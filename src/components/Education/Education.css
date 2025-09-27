@@ -2,11 +2,12 @@
 
 /* Container */
 .timeline-container {
-  background: #f5f7fa;
+ background: linear-gradient(135deg, #f0f7ff, #ffffff);
   min-height: 100vh;
   padding: 40px 20px;
   font-family: 'Poppins', sans-serif;
   text-align: center;
+  
 }
 
 /* Heading */
@@ -96,7 +97,7 @@
 
 .timeline-content h2 {
   margin: 10px 0;
-  font-size: 22px;
+  font-size: 16px;
   color: teal;
   font-weight: 600;
 }
@@ -104,7 +105,7 @@
 .timeline-content p {
   color: #444;
   line-height: 1.6;
-  font-size: 18px;   /* bigger for college name */
+  font-size: 14px;   /* bigger for college name */
   font-weight: 600;  /* semi-bold */
   margin-bottom: 10px;
 }

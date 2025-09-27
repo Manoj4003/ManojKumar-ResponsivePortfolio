@@ -1,0 +1,127 @@
+.contact-details-page {
+  padding: 60px 0;
+  font-family: 'Arial', sans-serif;
+  background-color: #F9FAFB;
+  color: #111827;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 32px;
+  margin-bottom: 40px;
+  font-weight: bold;
+}
+
+.section-title .highlight {
+  color: #1b949b; /* primary color */
+}
+
+.contact-cards-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.contact-card {
+  background-color: #FFFFFF;
+  padding: 25px 20px;
+  border-radius: 12px;
+  text-align: left;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.08);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.contact-card h5 {
+  color: #1b949b;
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+.contact-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.12);
+}
+
+/* Contact Via Card */
+.contact-via-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 18px;
+  font-size: 16px;
+}
+
+.contact-item a {
+  margin-left: 12px;
+  color: #1b949b;
+  font-weight: 500;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.contact-item a:hover {
+  color: #138080;
+}
+
+.contact-icon {
+  font-size: 28px; /* perfect size */
+  min-width: 32px;
+  color: #1b949b;
+}
+
+.download-cv {
+  background-color: #1b949b;
+  color: #fff !important;
+  padding: 8px 16px;
+  border-radius: 6px;
+  display: inline-block;
+}
+
+.download-cv:hover {
+  background-color: #138080;
+}
+
+/* Contact Form */
+.contact-form-card form .form-control {
+  border-radius: 8px;
+  padding: 10px;
+  font-size: 14px;
+}
+
+.contact-form-card form .form-control:focus {
+  border-color: #1b949b;
+  box-shadow: 0 0 0 0.2rem rgba(27,148,155,0.25);
+}
+
+.contact-form-card form button {
+  background-color: #1b949b;
+  border: none;
+  padding: 10px 25px;
+  font-weight: 500;
+  border-radius: 8px;
+  color: #FFFFFF;
+  transition: background-color 0.3s;
+}
+
+.contact-form-card form button:hover {
+  background-color: #138080;
+}
+
+@media (max-width: 768px) {
+  .contact-card {
+    width: 100%;
+  }
+  .contact-cards-row {
+    gap: 15px;
+  }
+  .section-title {
+    font-size: 28px;
+  }
+}
