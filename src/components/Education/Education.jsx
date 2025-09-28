@@ -30,7 +30,7 @@ export default function Education() {
 
   return (
     <div className="timeline-container">
-      <h1 className="timeline-title">Education Details</h1>
+      <h1 className="timeline-title">Education <span>Details</span> </h1>
 
       <div className="timeline">
         {phases.map((phase, index) => (

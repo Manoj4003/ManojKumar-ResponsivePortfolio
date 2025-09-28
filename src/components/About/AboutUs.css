@@ -4,7 +4,7 @@
   align-items: center;
   justify-content: center;
   padding: 60px 20px;
-  background: linear-gradient(135deg, #f0f7ff, #ffffff);
+  background-color: #e1efef;
 }
 
 .about-section .row {
@@ -29,9 +29,9 @@
   opacity: 0;
   animation: fadeIn 1s forwards;
   animation-delay: 0.5s;
-
 }
-.about-text h2{
+
+.about-text h2 {
   color: #1b949b !important;
 }
 
@@ -62,7 +62,8 @@
   width: 60px;
   margin: 25px 0;
 }
-.contact-details a{
+
+.contact-details a {
   text-decoration: none;
 }
 
@@ -103,11 +104,11 @@
   background: #138080;
   transform: translateY(-2px);
 }
-a{
+
+a {
   list-style-type: none;
 }
 
-/* Animations */
 @keyframes fadeInUp {
   to {
     opacity: 1;
@@ -121,26 +122,64 @@ a{
   }
 }
 
-/* Responsive Design */
+@media (max-width: 992px) {
+  .about-section {
+    padding: 60px 20px;
+  }
+
+  .about-section img {
+    max-width: 300px;
+  }
+}
+
 @media (max-width: 768px) {
   .about-section {
     padding: 40px 20px;
-    text-align: center;
   }
 
   .about-section img {
     margin-bottom: 30px;
+    max-width: 250px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0; 
+  }
+
+  .about-image {
+    margin-top: 0; 
+  }
+  
+  .about-text h2,
+  .about-text h3 {
+    text-align: left;
+  }
+
+  .about-section p {
+    text-align: left;
   }
 
   .about-section h2 {
-    font-size: 2rem;
+    font-size: 22px;
   }
 
   .about-section h3 {
-    font-size: 1.5rem;
+    font-size: 22px;
   }
 
   .about-section p {
     font-size: 1rem;
+  }
+
+  .contact-details p {
+    justify-content: flex-start;
+    font-size: 14px;
+
+  }
+ 
+
+  .hero-buttons {
+    text-align: center;
+    font-size: 14px;
+   
   }
 }

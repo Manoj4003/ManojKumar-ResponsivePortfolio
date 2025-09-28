@@ -14,7 +14,7 @@ const Skills = () => {
   return (
     <>
       <section id="skills" className="skills-section">
-        <h2 className="mb-5">My Skills</h2>
+        <h2 className="mb-5 Skills">My <span>Skills</span></h2>
         <div className="skills-slider">
           <div className="skills-track">
             {/* 1st Set */}

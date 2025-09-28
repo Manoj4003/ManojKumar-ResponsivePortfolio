@@ -1,14 +1,12 @@
-/* Navbar Background */
+/* Navbar Base */
 .custom-navbar {
   background-color: #1b949b;
   padding: 0.8rem 0;
   min-height: 80px;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-  font-family: 'Poppins', sans-serif;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
   z-index: 1030;
 }
 
-/* Brand styling */
 .brand-wrapper {
   font-size: 1.6rem;
   font-weight: 700;
@@ -21,7 +19,6 @@
   color: #ff4c60 !important;
 }
 
-/* Nav links styling */
 .nav-links .nav-link {
   color: #fff !important;
   margin-right: 1.5rem;
@@ -33,53 +30,59 @@
   color: #ffb347 !important;
 }
 
-/* "Let's Talk" button styling */
+/* Professional Button */
 .lets-talk-btn {
   background-color: #ff4c60;
   border: none;
   color: #fff;
   font-weight: 600;
-  padding: 0.45rem 1.2rem;
-  border-radius: 25px;
-  transition: 0.3s;
+  padding: 0.5rem 1.4rem;
+  border-radius: 12px; /* professional rounded rectangle */
+  transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 .lets-talk-btn:hover {
   background-color: #e03b4b;
+  transform: translateY(-2px);
   color: #fff;
 }
 
-/* Mobile responsive styles */
+/* Toggler */
+.navbar-toggler {
+  border: 1px solid #fff;
+  transition: all 0.3s ease-in-out;
+  padding: 0.35rem 0.5rem;
+}
+
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba%28255,255,255,1%29' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+  transition: all 0.3s ease-in-out;
+}
+
+.navbar-toggler:not(.collapsed) .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba%28255,255,255,1%29' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M20 10 L10 20 M10 10 L20 20'/%3E%3C/svg%3E");
+}
+
+/* Mobile Styles */
 @media (max-width: 767px) {
+  .brand-wrapper {
+    font-size: 1.3rem;
+  }
+
   .navbar-collapse {
     background-color: #1b949b;
     padding: 1rem 0;
-    width: 100%;
   }
 
   .navbar-collapse .nav-link {
     display: block;
-    width: 100%;
-    margin: 0.25rem 0;
     text-align: center;
+    margin: 0.5rem 0;
   }
 
   .lets-talk-btn {
     width: 90%;
-    margin: 0.5rem auto 0 auto;
+    margin: 1rem auto;
     display: block;
   }
-
-  .navbar-toggler {
-    border-color: #fff;
-  }
-
-  .navbar-toggler-icon {
-    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba%28255,255,255,1%29' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
-  }
-}
-
-/* Smooth scroll */
-html {
-  scroll-behavior: smooth;
 }

@@ -4,6 +4,7 @@ import AboutUs from './components/About/AboutUs';
 import ContactPage from './components/ContactUs/ContactUs';
 
 import Education from './components/Education/Education';
+import Footer from './components/Footer/Footer';
 import HeroSection from './components/HeroSection/HeroSection';
 import AppNavbar from './components/Navbar/Navbar';
 import Projects from './components/ProjectPart/Projects';
@@ -20,6 +21,7 @@ function App() {
       <Skills/>
       <Projects/>
       <ContactPage/>
+      <Footer/>
     </div>
   );
 }

@@ -1,7 +1,6 @@
 .contact-details-page {
   padding: 60px 0;
-  font-family: 'Arial', sans-serif;
-  background-color: #F9FAFB;
+ background-color: #e1efef;
   color: #111827;
 }
 
@@ -117,11 +116,20 @@
 @media (max-width: 768px) {
   .contact-card {
     width: 100%;
+  
   }
+  .contact-card a{
+      font-size: 15px;
+  }
+  
+  
   .contact-cards-row {
     gap: 15px;
   }
   .section-title {
-    font-size: 28px;
+    font-size: 22px;
   }
+  .submit {
+  text-align: center !important;
+}
 }

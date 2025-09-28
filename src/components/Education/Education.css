@@ -1,16 +1,10 @@
-
-
-/* Container */
 .timeline-container {
- background: linear-gradient(135deg, #f0f7ff, #ffffff);
+  background-color: #d7e5e5c8;
   min-height: 100vh;
   padding: 40px 20px;
-  font-family: 'Poppins', sans-serif;
   text-align: center;
-  
 }
 
-/* Heading */
 .timeline-title {
   font-family: 'Merriweather', serif;
   font-size: 32px;
@@ -18,7 +12,9 @@
   color: #222;
   margin-bottom: 8px;
 }
-
+.timeline-title span {
+  color: #1b949b;
+}
 .timeline-subtitle {
   font-size: 16px;
   color: #666;
@@ -27,7 +23,6 @@
   letter-spacing: 0.5px;
 }
 
-/* Timeline wrapper */
 .timeline {
   position: relative;
   max-width: 900px;
@@ -35,7 +30,6 @@
   padding: 20px 0;
 }
 
-/* Vertical line */
 .timeline::after {
   content: "";
   position: absolute;
@@ -47,14 +41,12 @@
   margin-left: -2px;
 }
 
-/* Timeline items */
 .timeline-item {
   padding: 20px 40px;
   position: relative;
   width: 50%;
 }
 
-/* Left & Right alignment */
 .timeline-item.left {
   left: 0;
 }
@@ -63,7 +55,6 @@
   left: 50%;
 }
 
-/* Dots */
 .timeline-dot {
   position: absolute;
   top: 30px;
@@ -80,7 +71,6 @@
   left: -10px;
 }
 
-/* Content cards */
 .timeline-content {
   background: #fff;
   padding: 20px;
@@ -105,12 +95,11 @@
 .timeline-content p {
   color: #444;
   line-height: 1.6;
-  font-size: 14px;   /* bigger for college name */
-  font-weight: 600;  /* semi-bold */
+  font-size: 14px;
+  font-weight: 600;
   margin-bottom: 10px;
 }
 
-/* Date and tag */
 .timeline-date {
   font-size: 14px;
   color: #888;
@@ -130,10 +119,12 @@
   font-weight: 500;
 }
 
-/* Responsive */
 @media screen and (max-width: 768px) {
   .timeline::after {
     left: 20px;
+  }
+  .timeline-title {
+    font-size: 22px;
   }
 
   .timeline-item {
@@ -149,5 +140,9 @@
   .timeline-dot {
     left: 10px;
     right: auto;
+  }
+  
+  .timeline-item.right .timeline-dot {
+    left: 10px; 
   }
 }
