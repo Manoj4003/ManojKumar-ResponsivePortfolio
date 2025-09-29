@@ -30,7 +30,7 @@ const Projects = () => {
     {
       title: "Mexant Business",
       image: project3,
-      description: "A multipage business website template with hero carousel, product and testimonial sections, and a contact form.",
+      description: "A business template with multipage structure, hero carousel, product sections, and a contact form.",
       techUsed: ["HTML", "CSS", "JavaScript" ,"React"],
       demo: "https://your-demo-link.com",
       code: "https://github.com/Manoj4003/mexant-website-using-react-with-mobile-view",
@@ -63,7 +63,7 @@ const Projects = () => {
 
   return (
     // 🎯 WRAPPER: This outer div will take the full width and the background color
-    <div className="projects-section-wrapper" id="projects"> 
+    <div className="projects-section-wrapper mt-3" id="projects"> 
       {/* Container class moves from here */}
       <Container className="my-5 projects"> 
         <h2 className="text-center mb-5">My <span className="span-color">Projects</span></h2>

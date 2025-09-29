@@ -29,7 +29,7 @@ export default function Education() {
   ];
 
   return (
-    <div className="timeline-container">
+    <div className="timeline-container mt-5">
       <h1 className="timeline-title">Education <span>Details</span> </h1>
 
       <div className="timeline">

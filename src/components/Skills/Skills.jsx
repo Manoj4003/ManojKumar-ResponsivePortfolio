@@ -13,7 +13,7 @@ import sqlimg from  '../../assets/sqlimg.jpg'
 const Skills = () => {
   return (
     <>
-      <section id="skills" className="skills-section">
+      <section id="skills" className="skills-section mt-5">
         <h2 className="mb-5 Skills">My <span>Skills</span></h2>
         <div className="skills-slider">
           <div className="skills-track">

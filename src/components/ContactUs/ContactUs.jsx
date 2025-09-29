@@ -44,7 +44,7 @@ export default function ContactUs() {
   };
 
   return (
-    <div className="contact-details-page">
+    <div className="contact-details-page mt-5">
       <Container>
         <h2 className="section-title">
           Contact <span className="highlight">Details</span>

@@ -16,6 +16,9 @@
   width: max-content;
   animation: scroll-left 25s linear infinite;
 }
+.Skills{
+  font-weight: bolder;
+}
 .Skills span{
   color: #1b949b !important;
   font-weight: 900;

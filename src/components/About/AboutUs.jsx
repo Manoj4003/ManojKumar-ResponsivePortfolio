@@ -19,7 +19,7 @@ function AboutUs() {
   const mapsUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(addressQuery)}`;
 
   return (
-    <section className="about-section">
+    <section className="about-section mt-5" >
       <Container>
         <Row className="align-items-center">
           <Col md={5} className="about-image">
