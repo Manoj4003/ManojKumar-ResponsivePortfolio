@@ -1,52 +1,83 @@
+/* ===== Section background ===== */
+.skills-section {
+  background: linear-gradient(135deg, #e1efef 0%, #c2e9e9 100%);
+  padding: 60px 0;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+}
+
+/* ===== Title styling ===== */
+.Skills {
+  font-weight: bolder;
+  font-size: 2.5rem;
+  position: relative;
+  display: inline-block;
+}
+
+.Skills span {
+  color: #1b949b !important;
+  font-weight: 900;
+}
+
+.underline {
+  height: 4px;
+  width: 80px;
+  background: #1b949b;
+  margin: 8px auto 0;
+  border-radius: 2px;
+}
+
+/* ===== Slider wrapper ===== */
 .skills-slider {
   width: 100%;
   overflow: hidden;
+  margin: 0 auto;
   position: relative;
+  padding: 20px 0;
 }
 
-.skills-section {
-  background-color: #e1efef;
-  padding: 60px 0;
-  text-align: center;
-  overflow: hidden;
-}
+/* ===== Track animation ===== */
 .skills-track {
   display: flex;
   gap: 20px;
   width: max-content;
   animation: scroll-left 25s linear infinite;
 }
-.Skills{
-  font-weight: bolder;
+
+.skills-slider:hover .skills-track {
+  animation-play-state: paused; /* ✅ Pause on hover */
 }
-.Skills span{
-  color: #1b949b !important;
-  font-weight: 900;
-}
+
+/* ===== Skill card ===== */
 .skill-card {
   background: #ffffff;
   border-radius: 15px;
   padding: 20px 15px;
   text-align: center;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-  transition: transform 0.3s;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.12);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
   width: 160px;
-  margin: 0;
   flex: 0 0 auto;
+  animation: float 3s ease-in-out infinite;
 }
 
-
-.level-label {
-  font-size: 14px;
-  font-weight: 600;
-  color: #777;
+.skill-card:hover {
+  transform: scale(1.12);
+  box-shadow: 0 10px 25px rgba(27, 148, 155, 0.3);
 }
 
+/* ===== Icon ===== */
 .skill-icon {
   width: 80px;
   height: 80px;
   object-fit: contain;
   margin-bottom: 10px;
+  transition: transform 0.3s ease;
+}
+
+.skill-card:hover .skill-icon {
+  transform: rotate(5deg) scale(1.1);
 }
 
 .skill-card h4 {
@@ -56,40 +87,36 @@
   margin: 10px 0 4px;
 }
 
+/* ===== Scroll animation ===== */
 @keyframes scroll-left {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(-50%);
-  }
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
 }
 
-.scroll-left {
-  animation: scroll-left 1s linear infinite;
+/* ===== Floating animation ===== */
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
 }
 
-@media (max-width: 480px) {
+/* ===== Responsive ===== */
+@media (max-width: 600px) {
   .skill-card {
-    width: 130px; 
-    padding: 15px 10px; 
+    width: 130px;
+    padding: 15px 10px;
   }
 
   .skill-icon {
-    width: 60px; 
+    width: 60px;
     height: 60px;
-    margin-bottom: 8px;
   }
 
   .skill-card h4 {
     font-size: 16px;
   }
-  
-  .skills-track {
-    gap: 15px; 
-  }
 
   .skills-track {
-    animation-duration: 20s; 
+    gap: 15px;
+    animation-duration: 20s;
   }
 }
