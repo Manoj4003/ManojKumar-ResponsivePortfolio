@@ -5,16 +5,11 @@ import "./Navbar.css";
 function AppNavbar() {
   return (
     <Navbar collapseOnSelect expand="md" fixed="top" className="custom-navbar">
-      <Container>
+      <Container className="d-flex align-items-center justify-content-between">
         {/* Brand + Logo */}
-        <Navbar.Brand href="#home" className="d-flex align-items-center gap-2">
-          <div
-            className="rounded-circle bg-white text-dark d-flex align-items-center justify-content-center fw-bold"
-            style={{ width: "2.2rem", height: "2.2rem", fontSize: "0.9rem" }}
-          >
-            MK
-          </div>
-          <span className="brand-wrapper">MANOJKUMAR A</span>
+        <Navbar.Brand href="#home" className="d-flex align-items-center">
+          <div className="logo-circle">MK</div>
+          <span className="brand-wrapper ms-2">MANOJKUMAR A</span>
         </Navbar.Brand>
 
         {/* Toggler (for mobile) */}

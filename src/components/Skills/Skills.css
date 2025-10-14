@@ -18,15 +18,9 @@
 .Skills span {
   color: #1b949b !important;
   font-weight: 900;
+  font-size: 32px;
 }
 
-.underline {
-  height: 4px;
-  width: 80px;
-  background: #1b949b;
-  margin: 8px auto 0;
-  border-radius: 2px;
-}
 
 /* ===== Slider wrapper ===== */
 .skills-slider {

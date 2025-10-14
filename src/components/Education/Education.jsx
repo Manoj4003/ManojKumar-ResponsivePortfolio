@@ -1,3 +1,4 @@
+import React, { useEffect } from "react";
 import "./Education.css";
 
 export default function Education() {
@@ -28,9 +29,29 @@ export default function Education() {
     },
   ];
 
+  // ✅ Scroll animation logic
+  useEffect(() => {
+    const elements = document.querySelectorAll(".timeline-item, .timeline-title");
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("visible");
+          }
+        });
+      },
+      { threshold: 0.2 }
+    );
+
+    elements.forEach((el) => observer.observe(el));
+    return () => observer.disconnect();
+  }, []);
+
   return (
     <div className="timeline-container mt-5">
-      <h1 className="timeline-title">Education <span>Details</span> </h1>
+      <h1 className="timeline-title">
+        Education <span>Details</span>
+      </h1>
 
       <div className="timeline">
         {phases.map((phase, index) => (

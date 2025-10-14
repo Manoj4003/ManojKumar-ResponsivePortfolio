@@ -14,14 +14,14 @@ const Skills = () => {
   return (
     <>
       <section id="skills" className="skills-section mt-5">
-        <h2 className="mb-5 Skills">
+        <h4 className="mb-5 Skills">
           My <span>Skills</span>
           <div className="underline"></div>
-        </h2>
+        </h4>
         
         <div className="skills-slider">
           <div className="skills-track">
-            {/* Original set */}
+            
             <div className="skill-card"><img src={Html} className="skill-icon" alt="HTML" /><h4>HTML</h4></div>
             <div className="skill-card"><img src={Css} className="skill-icon" alt="CSS" /><h4>CSS</h4></div>
             <div className="skill-card"><img src={JavaScript} className="skill-icon" alt="JavaScript" /><h4>JavaScript</h4></div>

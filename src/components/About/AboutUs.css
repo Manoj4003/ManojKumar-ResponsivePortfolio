@@ -60,6 +60,7 @@
 
 .contact-details a {
   text-decoration: none;
+  color: #138080;
 }
 
 .contact-details {
@@ -78,6 +79,7 @@
   margin-right: 8px;
   color: #1b949b;
 }
+
 
 .hero-buttons {
   margin-top: 25px;

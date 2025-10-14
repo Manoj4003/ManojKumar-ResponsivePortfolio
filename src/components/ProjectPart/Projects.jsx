@@ -1,72 +1,81 @@
 import React from "react";
 import { Container, Row, Col, Card, Button, Badge } from "react-bootstrap";
-import './Projects.css';
+import "./Projects.css";
 
 import project1 from "../../assets/business-website.png";
-import project2 from "../../assets/restaurant-villa-website.png";
+import project2 from "../../assets/portfolio.png";
 import project3 from "../../assets/mexant-website.png";
-import project4 from "../../assets/startupamp-website.png";
-import project5 from "../../assets/portfolio.png";
-import project6 from "../../assets/hero_bg.png";
+import project4 from "../../assets/restaurant-villa-website.png";
+import project5 from "../../assets/startupamp-website.png";
+import project6 from "../../assets/formValidation.png";
 
 const Projects = () => {
   const projectList = [
     {
       title: "Smart Business Site",
       image: project1,
-      description: "A modern, responsive business website showcasing services, portfolio, team, and contact sections.",
-      techUsed: ["HTML", "CSS", "JavaScript" ,"Bootstrap"],
+      description:
+        "A modern, responsive form template with real-time input validation.Displays clear error and success messages for user-friendly interaction.",
+      techUsed: ["HTML", "CSS", "JavaScript", "Bootstrap"],
       demo: "https://starupbussines.web.app/",
       code: "https://github.com/Manoj4003/Business_project_with_mobile_responsive_updated_project",
     },
     {
-      title: "Villa Agency",
+      title: "Personal Portfolio",
       image: project2,
-      description: "A responsive real estate website template featuring property listings, detail pages, and a contact form.",
-      techUsed: ["HTML", "CSS", "JavaScript" ,"Bootstrap"],
-      demo: "https://villa-restaurant-website.netlify.app/",
-      code: "https://github.com/Manoj4003/Restaurant-villa-with-mobile-responsive",
+      description:
+        "A sleek personal portfolio showcasing skills, projects, and experience with an interactive design, fully responsive across all devices.",
+      techUsed: ["React", "CSS", "JavaScript", "React"],
+      demo: "",
+      code: "https://github.com/Manoj4003/ManojKumar-ResponsivePortfolio",
     },
+
     {
       title: "Mexant Business",
       image: project3,
-      description: "A business template with multipage structure, hero carousel, product sections, and a contact form.",
-      techUsed: ["HTML", "CSS", "JavaScript" ,"React"],
+      description:
+        "A form validation template with real-time input checks.Includes clear error and success messages for a user-friendly experience.",
+      techUsed: ["HTML", "CSS", "JavaScript", "React"],
       demo: "https://mexant-website-c76cd.web.app/",
       code: "https://github.com/Manoj4003/mexant-website-using-react-with-mobile-view",
     },
     {
-      title: "StartupAMP Business School",
+      title: "Villa Agency",
       image: project4,
-      description: "A professional website template for business schools with courses, team, and contact sections, optimized for mobile.",
-      techUsed: ["HTML","CSS","JavaScript"],
-      demo: "",
+      description:
+        "A responsive form validation template built with JavaScript.It performs real-time input checks and displays clear error or success messages.",
+      techUsed: ["HTML", "CSS", "JavaScript", "Bootstrap"],
+      demo: "https://villa-restaurant-website.netlify.app/",
+      code: "https://github.com/Manoj4003/Restaurant-villa-with-mobile-responsive",
+    },
+    {
+      title: "StartupAMP Business School",
+      image: project5,
+      description:
+        "A professional website template for business schools with courses, team, and contact sections, optimized for mobile.",
+      techUsed: ["HTML", "CSS", "JavaScript"],
+      demo: "https://startupamp-business.netlify.app/",
       code: "https://github.com/Manoj4003/StartUp-website-with-mobile-responsive",
     },
     {
-      title: "Personal Portfolio",
-      image: project5,
-      description: "A sleek personal portfolio showcasing skills, projects, and experience with an interactive design, fully responsive across all devices.",
-      techUsed: ["React", "CSS","JavaScript","React"],
-      demo: "",
-      code: "https://github.com/Manoj4003/ManojKumar-ResponsivePortfolio",
-    },
-    {
-      title: "Portfolio Hero",
+      title: "Form Validation",
       image: project6,
-      description: "Personal portfolio hero section built with React.",
-      techUsed: ["React", "CSS", "Bootstrap"],
-      demo: "",
-      code: "https://github.com/yourusername/todo-app",
+      description:
+        "A JavaScript-based form validation project that checks user inputs in real-time and shows clear error or success messages.",
+      techUsed: ["HTML", "CSS", "JavaScript"],
+      demo: "https://animatedformvalidation.netlify.app/",
+      code: "https://github.com/Manoj4003/form-validation-using-javaScript",
     },
   ];
 
   return (
     // 🎯 WRAPPER: This outer div will take the full width and the background color
-    <div className="projects-section-wrapper mt-3" id="projects"> 
+    <div className="projects-section-wrapper mt-3" id="projects">
       {/* Container class moves from here */}
-      <Container className="my-5 projects"> 
-        <h2 className="text-center mb-5">My <span className="span-color">Projects</span></h2>
+      <Container className="my-5 projects">
+        <h2 className="text-center mb-5">
+          My <span className="span-color">Projects</span>
+        </h2>
         <Row className="g-4 justify-content-center">
           {projectList.map((project, index) => (
             <Col xs={12} md={6} lg={4} key={index}>
@@ -80,7 +89,7 @@ const Projects = () => {
                 <Card.Body className="d-flex flex-column">
                   <Card.Title>{project.title}</Card.Title>
                   <Card.Text>{project.description}</Card.Text>
-                  
+
                   <div className="mb-3 tech">
                     {project.techUsed.map((tech, idx) => (
                       <Badge bg="secondary" key={idx} className="me-1">
@@ -90,10 +99,18 @@ const Projects = () => {
                   </div>
 
                   <div className="mt-auto d-flex justify-content-between card-button">
-                    <Button href={project.demo} target="_blank" variant="primary">
+                    <Button
+                      href={project.demo}
+                      target="_blank"
+                      variant="primary"
+                    >
                       Demo
                     </Button>
-                    <Button href={project.code} target="_blank" variant="secondary">
+                    <Button
+                      href={project.code}
+                      target="_blank"
+                      variant="secondary"
+                    >
                       Code
                     </Button>
                   </div>
