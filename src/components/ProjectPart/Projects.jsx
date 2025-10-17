@@ -26,7 +26,7 @@ const Projects = () => {
       description:
         "A sleek personal portfolio showcasing skills, projects, and experience with an interactive design, fully responsive across all devices.",
       techUsed: ["React", "CSS", "JavaScript", "React"],
-      demo: "",
+      demo: "https://portfolio-38d91.web.app/",
       code: "https://github.com/Manoj4003/ManojKumar-ResponsivePortfolio",
     },
 

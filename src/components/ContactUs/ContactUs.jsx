@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { Container, Row, Col, Form, Button, Alert } from "react-bootstrap";
+import resume from '../../assets/MANOJKUMAR A -RESUME.pdf';
 import {
   FaEnvelope,
   FaLinkedin,
@@ -113,7 +114,7 @@ export default function ContactUs() {
               </div>
               <div className="contact-item">
                 <FaDownload className="contact-icon" />
-                <a href="/ManojKumar_CV.pdf" download className="download-cv">
+                <a href={resume} download className="download-cv">
                   Download CV
                 </a>
               </div>
