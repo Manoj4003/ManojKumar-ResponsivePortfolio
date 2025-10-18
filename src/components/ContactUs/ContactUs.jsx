@@ -1,6 +1,6 @@
-import React, { useState } from "react";
-import { Container, Row, Col, Form, Button, Alert } from "react-bootstrap";
-import resume from '../../assets/MANOJKUMAR A -RESUME.pdf';
+import React, { useState, useEffect } from "react";
+import { Container, Row, Col, Form, Button, Alert, Spinner } from "react-bootstrap";
+import resume from "../../assets/MANOJKUMAR A -RESUME.pdf";
 import {
   FaEnvelope,
   FaLinkedin,
@@ -15,11 +15,11 @@ import "./ContactUs.css";
 export default function ContactUs() {
   const [formData, setFormData] = useState({ name: "", email: "", message: "" });
   const [errors, setErrors] = useState({});
-  const [status, setStatus] = useState({ success: false, sending: false });
+  const [sending, setSending] = useState(false);
+  const [success, setSuccess] = useState(false);
 
   // Handle input change
-  const handleChange = (e) =>
-    setFormData({ ...formData, [e.target.name]: e.target.value });
+  const handleChange = (e) => setFormData({ ...formData, [e.target.name]: e.target.value });
 
   // Validate fields
   const validate = () => {
@@ -33,32 +33,42 @@ export default function ContactUs() {
     return Object.keys(tempErrors).length === 0;
   };
 
+  // Auto-hide success message
+  useEffect(() => {
+    if (success) {
+      const timer = setTimeout(() => setSuccess(false), 4000);
+      return () => clearTimeout(timer);
+    }
+  }, [success]);
+
   // Handle form submission
   const handleSubmit = (e) => {
     e.preventDefault();
     if (!validate()) return;
 
-    setStatus({ sending: true, success: false });
+    setSending(true);
+    setSuccess(false);
 
     emailjs
       .send(
-        "YOUR_SERVICE_ID", // 🔹 Replace with your EmailJS service ID
-        "YOUR_TEMPLATE_ID", // 🔹 Replace with your EmailJS template ID
+        process.env.REACT_APP_EMAILJS_SERVICE_ID, // from .env
+        process.env.REACT_APP_EMAILJS_TEMPLATE_ID,
         {
           from_name: formData.name,
           from_email: formData.email,
           message: formData.message,
         },
-        "YOUR_PUBLIC_KEY" // 🔹 Replace with your EmailJS public key
+        process.env.REACT_APP_EMAILJS_PUBLIC_KEY
       )
       .then(() => {
-        setStatus({ sending: false, success: true });
+        setSending(false);
+        setSuccess(true);
         setFormData({ name: "", email: "", message: "" });
         setErrors({});
       })
       .catch((error) => {
         console.error("EmailJS Error:", error);
-        setStatus({ sending: false, success: false });
+        setSending(false);
       });
   };
 
@@ -74,12 +84,14 @@ export default function ContactUs() {
           <Col md={4} sm={12}>
             <div className="contact-card contact-via-card">
               <h5>Contact Via</h5>
+
               <div className="contact-item">
-                <FaEnvelope className="contact-icon" />
+                <FaEnvelope className="contact-icon" aria-label="Email" />
                 <a href="mailto:manojknr16@gmail.com">manojknr16@gmail.com</a>
               </div>
+
               <div className="contact-item">
-                <FaLinkedin className="contact-icon" />
+                <FaLinkedin className="contact-icon" aria-label="LinkedIn" />
                 <a
                   href="https://www.linkedin.com/in/manojkumar1608/"
                   target="_blank"
@@ -88,12 +100,14 @@ export default function ContactUs() {
                   Manojkumar A
                 </a>
               </div>
+
               <div className="contact-item">
-                <FaPhone className="contact-icon" />
+                <FaPhone className="contact-icon" aria-label="Phone" />
                 <a href="tel:+916379209750">+91 6379209750</a>
               </div>
+
               <div className="contact-item">
-                <FaMapMarkerAlt className="contact-icon" />
+                <FaMapMarkerAlt className="contact-icon" aria-label="Location" />
                 <a
                   href="https://www.google.com/maps?q=Avinashi,+Tiruppur"
                   target="_blank"
@@ -102,8 +116,9 @@ export default function ContactUs() {
                   Avinashi, Tiruppur
                 </a>
               </div>
+
               <div className="contact-item">
-                <FaGithub className="contact-icon" />
+                <FaGithub className="contact-icon" aria-label="GitHub" />
                 <a
                   href="https://github.com/Manoj4003"
                   target="_blank"
@@ -112,8 +127,9 @@ export default function ContactUs() {
                   GitHub Profile
                 </a>
               </div>
+
               <div className="contact-item">
-                <FaDownload className="contact-icon" />
+                <FaDownload className="contact-icon" aria-label="Download CV" />
                 <a href={resume} download className="download-cv">
                   Download CV
                 </a>
@@ -126,14 +142,15 @@ export default function ContactUs() {
             <div className="contact-card contact-form-card">
               <h5>Send a Message</h5>
 
-              {status.success && (
-                <Alert variant="success">
-                  ✅ Thank you, {formData.name || "User"}! Your message has been
-                  sent successfully.
+              {success && (
+                <Alert variant="success" className="mt-2">
+                  ✅ Thank you! Your message has been sent successfully.
                 </Alert>
               )}
-              {status.sending && (
-                <Alert variant="info">⏳ Sending message...</Alert>
+              {sending && (
+                <Alert variant="info" className="mt-2">
+                  ⏳ Sending message...
+                </Alert>
               )}
 
               <Form onSubmit={handleSubmit} noValidate>
@@ -186,9 +203,23 @@ export default function ContactUs() {
                 <Button
                   type="submit"
                   className="btn contact-submit-btn"
-                  disabled={status.sending}
+                  disabled={sending}
                 >
-                  {status.sending ? "Sending..." : "Send Message"}
+                  {sending ? (
+                    <>
+                      <Spinner
+                        as="span"
+                        animation="border"
+                        size="sm"
+                        role="status"
+                        aria-hidden="true"
+                        className="me-2"
+                      />
+                      Sending...
+                    </>
+                  ) : (
+                    "Send Message"
+                  )}
                 </Button>
               </Form>
             </div>
